@@ -1,0 +1,10 @@
+# --- Backend ---
+fastapi
+uvicorn
+python-multipart
+requests
+
+# --- Frontend ---
+streamlit
+pandas
+openpyxl

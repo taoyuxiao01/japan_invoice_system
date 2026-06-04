@@ -15,7 +15,7 @@ app.add_middleware(
 )
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
-LLM_MODEL = "qwen3.5:35b-a3b-q4_K_M"
+LLM_MODEL = "qwen3.5:9b-q4_K_M "
 
 @app.post("/api/extract_invoice")
 async def extract_invoice(file: UploadFile = File(...)):
@@ -58,7 +58,8 @@ async def extract_invoice(file: UploadFile = File(...)):
         
         response = requests.post(OLLAMA_URL, json={
             "model": LLM_MODEL,
-            "prompt": prompt,             
+            "prompt": prompt,    
+            "think" : False,         
             "images": [base64_image],    
             "stream": False,
             "options": {

@@ -105,7 +105,7 @@ with col_data:
         if has_warnings:
             st.error("请人工核对异常字段，确认无误后**取消表格右侧的勾选**才能写入数据库。")
 
-        if st.button("写入 Excel 数据库", type="primary", disabled=has_warnings, use_container_width=True):
+        if st.button("Write to Excel", type="primary", disabled=has_warnings, use_container_width=True):
             # 安全提取数据写入
             final_date = edited_df[edited_df["字段"] == "日期"].iloc[0]["识别结果"]
             final_amount = edited_df[edited_df["字段"] == "总金额"].iloc[0]["识别结果"]

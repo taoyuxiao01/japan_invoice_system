@@ -5,6 +5,14 @@
 
 - 日本のレシート AI 抽出システムは、完全にローカル環境で動作する自動財務データ抽出ツールです。
 
+### **デモ画面 (Demo)**
+
+- 以下はシステムの実際の動作と抽出プロセスのデモです：
+
+![Japan Invoice Extraction System Demo](./assets/choose_pic.gif)
+
+![Japan Invoice Extraction System Demo](./assets/recognization.gif)
+
 ### **開発の背景**
 
 - 本プロジェクトは、友人の実際の副業における課題から生まれました。彼女は毎日、フォーマットが異なる数十から数百枚に及ぶ日本のレシートを処理する必要がありました。この膨大な作業量を軽減しつつ、機密性の高い財務データの漏洩リスクを完全に排除するために本システムは開発されました。
@@ -21,17 +29,6 @@
 - **ヒューマン・イン・ザ・ループ**：Excel にデータを保存する前に、画面上での手動確認と修正を必須とすることで、100%の正確性を確保します。
 
 - **モダンな分離アーキテクチャ**：軽量なバックエンド（FastAPI）が画像の圧縮とモデルの推論を効率的に処理し、インタラクティブなフロントエンド（Streamlit）が直感的な表編集体験を提供します。
-
-### **デモ画面 (Demo)**
-
-- 以下はシステムの実際の動作と抽出プロセスのデモです：
-
-![Japan Invoice Extraction System Demo](./assets/choose_pic.gif)
-
-![Japan Invoice Extraction System Demo](./assets/recognization.gif)
-
-
-
 
 
 

@@ -49,7 +49,17 @@ def start_services():
     # 步骤 2: 启动 Streamlit 前端 (确保在后端就绪后执行)
     print("\n [2/2] 正在启动前端 Web 界面...")
     frontend_process = subprocess.Popen(
-        [sys.executable, "-m", "streamlit", "run", "frontend/app.py"],
+        [
+            sys.executable,
+            "-m",
+            "streamlit",
+            "run",
+            "batch_app.py",
+            "--server.address",
+            "0.0.0.0",
+            "--server.port",
+            "8501",
+        ],
         stdout=sys.stdout,
         stderr=sys.stderr
     )
